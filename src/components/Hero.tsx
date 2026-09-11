@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
           className="w-full h-full"
         >
           <img
-            src="/images/hero-biryani.jpg"
+            src={`${import.meta.env.BASE_URL}images/hero-biryani.jpg`}
             alt="Fresh Chicken Biryani in Traditional Handi with Aromatic Basmati Rice at Hindustan Restaurant Kosgi"
             className="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.05] saturate-[1.1]"
             loading="eager"
@@ -199,7 +199,7 @@ export const Hero: React.FC = () => {
               <div className="relative rounded-2xl overflow-hidden bg-white border border-amber-500/30 shadow-2xl p-3">
                 <div className="relative h-64 w-full rounded-xl overflow-hidden bg-stone-100">
                   <img
-                    src="/images/hero-biryani.jpg"
+                    src={`${import.meta.env.BASE_URL}images/hero-biryani.jpg`}
                     alt="Signature Handi Biryani"
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                   />

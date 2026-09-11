@@ -9,7 +9,7 @@ export const ContactCTA: React.FC = () => {
       {/* Background Image with Light Warm Cream Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero-biryani.jpg"
+          src={`${import.meta.env.BASE_URL}images/hero-biryani.jpg`}
           alt="Delicious Biryani meal waiting at Hindustan Restaurant Kosgi"
           className="w-full h-full object-cover object-center filter brightness-[0.9] contrast-[1.05]"
           loading="lazy"

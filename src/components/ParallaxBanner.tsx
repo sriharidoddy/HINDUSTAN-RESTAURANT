@@ -23,7 +23,7 @@ export const ParallaxBanner: React.FC = () => {
         className="absolute inset-0 -top-16 -bottom-16 w-full h-[calc(100%+8rem)]"
       >
         <img
-          src="/images/biryani-serving.jpg"
+          src={`${import.meta.env.BASE_URL}images/biryani-serving.jpg`}
           alt="Chef delicately serving steaming Hyderabadi Biryani at Hindustan Restaurant Kosgi"
           className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.05]"
           loading="lazy"

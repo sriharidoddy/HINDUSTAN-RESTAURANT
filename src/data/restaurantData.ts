@@ -51,12 +51,21 @@ export const RESTAURANT_INFO = {
     'https://maps.google.com/maps?q=Hindustan%20Restaurant%20Amma%20Hospital%20Kosgi%20Telangana%20509339&t=&z=16&ie=UTF8&iwloc=&output=embed',
 };
 
+export const getAssetUrl = (path: string): string => {
+  if (!path) return '';
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${cleanPath}`;
+};
+
 export const SIGNATURE_FAVOURITES = [
   {
     id: 'sig-1',
     name: 'Chicken Biryani',
     description: 'Flavorful, aromatic and well-cooked chicken biryani.',
-    image: '/images/hero-biryani.jpg',
+    image: getAssetUrl('/images/hero-biryani.jpg'),
     badge: 'Chef Special',
     isVeg: false,
     priceText: 'Price on request',
@@ -65,7 +74,7 @@ export const SIGNATURE_FAVOURITES = [
     id: 'sig-2',
     name: 'Mutton Biryani',
     description: 'Rich and delicious mutton biryani prepared with traditional flavours.',
-    image: '/images/mutton-biryani.jpg',
+    image: getAssetUrl('/images/mutton-biryani.jpg'),
     badge: 'Popular Choice',
     isVeg: false,
     priceText: 'Price on request',
@@ -74,7 +83,7 @@ export const SIGNATURE_FAVOURITES = [
     id: 'sig-3',
     name: 'Non-Veg Curries',
     description: 'Tasty curries perfect with rice, roti or naan.',
-    image: '/images/nonveg-curry.jpg',
+    image: getAssetUrl('/images/nonveg-curry.jpg'),
     badge: 'Signature Gravy',
     isVeg: false,
     priceText: 'Price on request',
@@ -83,7 +92,7 @@ export const SIGNATURE_FAVOURITES = [
     id: 'sig-4',
     name: 'Butter Naan',
     description: 'Soft, buttery naan that pairs perfectly with our curries.',
-    image: '/images/butter-naan.jpg',
+    image: getAssetUrl('/images/butter-naan.jpg'),
     badge: 'Tandoor Fresh',
     isVeg: true,
     priceText: 'Price on request',
@@ -112,7 +121,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isSpicy: true,
     isSignature: true,
     priceText: 'Price on request',
-    image: '/images/hero-biryani.jpg',
+    image: getAssetUrl('/images/hero-biryani.jpg'),
   },
   {
     id: 'b-2',
@@ -123,7 +132,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isSpicy: true,
     isSignature: true,
     priceText: 'Price on request',
-    image: '/images/mutton-biryani.jpg',
+    image: getAssetUrl('/images/mutton-biryani.jpg'),
   },
   {
     id: 'b-3',
@@ -162,7 +171,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Tender chicken braised in a thick, rich onion-tomato gravy with roasted whole spices.',
     isVeg: false,
     priceText: 'Price on request',
-    image: '/images/nonveg-curry.jpg',
+    image: getAssetUrl('/images/nonveg-curry.jpg'),
   },
   {
     id: 'c-3',
@@ -206,7 +215,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isVeg: false,
     isSignature: true,
     priceText: 'Price on request',
-    image: '/images/nonveg-curry.jpg',
+    image: getAssetUrl('/images/nonveg-curry.jpg'),
   },
   {
     id: 'cu-2',
@@ -236,7 +245,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isVeg: true,
     isSignature: true,
     priceText: 'Price on request',
-    image: '/images/butter-naan.jpg',
+    image: getAssetUrl('/images/butter-naan.jpg'),
   },
   {
     id: 'r-2',
@@ -369,42 +378,42 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g-1',
     title: 'Signature Handi Chicken Biryani',
     category: 'Biryani',
-    image: '/images/hero-biryani.jpg',
+    image: getAssetUrl('/images/hero-biryani.jpg'),
     description: 'Freshly prepared chicken biryani cooked with saffron basmati rice and handi spices.',
   },
   {
     id: 'g-2',
     title: 'Traditional Mutton Biryani Feast',
     category: 'Biryani',
-    image: '/images/mutton-biryani.jpg',
+    image: getAssetUrl('/images/mutton-biryani.jpg'),
     description: 'Tender mutton cooked to perfection in aromatic long-grain rice.',
   },
   {
     id: 'g-3',
     title: 'Chef Serving Fresh Hot Biryani',
     category: 'Food',
-    image: '/images/biryani-serving.jpg',
+    image: getAssetUrl('/images/biryani-serving.jpg'),
     description: 'Steaming hot degh biryani served with authentic culinary passion.',
   },
   {
     id: 'g-4',
     title: 'Rich Non-Veg Curry & Gravy',
     category: 'Food',
-    image: '/images/nonveg-curry.jpg',
+    image: getAssetUrl('/images/nonveg-curry.jpg'),
     description: 'Simmered spiced chicken curry garnished with ginger juliennes.',
   },
   {
     id: 'g-5',
     title: 'Clay Tandoor Butter Naan',
     category: 'Food',
-    image: '/images/butter-naan.jpg',
+    image: getAssetUrl('/images/butter-naan.jpg'),
     description: 'Soft, buttery layered naan straight out of the piping tandoor oven.',
   },
   {
     id: 'g-6',
     title: 'Warm Dining Room Ambiance',
     category: 'Restaurant',
-    image: '/images/restaurant-ambience.jpg',
+    image: getAssetUrl('/images/restaurant-ambience.jpg'),
     description: 'Comfortable dine-in atmosphere with ambient copper lights and cozy seating.',
   },
   {

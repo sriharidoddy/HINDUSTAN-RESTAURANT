@@ -23,7 +23,7 @@ export const About: React.FC = () => {
           >
             <div className="relative rounded-3xl overflow-hidden border-2 border-amber-600/25 shadow-[0_20px_45px_rgba(50,30,10,0.12)] group bg-white">
               <img
-                src="/images/restaurant-ambience.jpg"
+                src={`${import.meta.env.BASE_URL}images/restaurant-ambience.jpg`}
                 alt="Welcoming dining ambiance at Hindustan Restaurant Kosgi"
                 className="w-full h-[420px] sm:h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
