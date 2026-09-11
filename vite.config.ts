@@ -4,6 +4,6 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/HINDUSTAN-RESTAURANT/',
+  base: process.env.VERCEL ? '/' : '/HINDUSTAN-RESTAURANT/',
   plugins: [tailwindcss(), react()],
 })
